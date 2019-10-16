@@ -1,7 +1,7 @@
 spring:
   application:
     name: ICCP-SSO
-  profiles: default
+  profiles: dev
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
 #    url: jdbc:mysql://localhost:3306/iccp?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true
