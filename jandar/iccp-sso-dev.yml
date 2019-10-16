@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: ICCP-SSO
+  profiles: default
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+#    url: jdbc:mysql://localhost:3306/iccp?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true
+#    username: root
+#    password: "root"
+    url: jdbc:mysql://192.68.68.95:3306/iccp?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true
+    username: ENC(85Dbk8jNOrnrROCF6CKSIQ==)
+    password: ENC(pNkckll2P68gdxzc1A7UebZwhj8RvsV0)
+#    url: jdbc:mysql://softdeptdbnx1.c8sikpqdromx.rds.cn-northwest-1.amazonaws.com.cn:3306/iccp?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true
+#    username: ENC(PwTO9pQzZkP0WZtcTxVyareYaT10KP7Z)  
+#    password: ENC(JCNOivrBH6Sg2g23Aj5M95KlCscqr85h)
+
+jasypt:
+  encryptor:
+    password: jandar
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    encoder-name: ICCP-SSO
+  instance:
+    status-page-url-path: ${server.servlet.context-path:}/actuator/info
+    health-check-url-path: ${server.servlet.context-path:}/actuator/health
+    home-page-url-path: /
+    
